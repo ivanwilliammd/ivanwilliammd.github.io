@@ -38,7 +38,6 @@ the request. It is a reachability hint, not uptime monitoring; real uptime lives
 
 ## Notes
 
-- The previous profile site (Bootstrap, `ivanwilliammd.ivanwilliamharsono.com`) is retired. The
-  portfolio now lives at **https://ivanwilliamharsono.com**.
+- Portfolio: **https://ivanwilliamharsono.com**.
 - Pages serves this repository from the default branch; there is no CI step to wait for.
 - Licence: MIT for the code. Logos belong to their respective services.
