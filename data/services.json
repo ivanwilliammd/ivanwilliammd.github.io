@@ -16,7 +16,7 @@
       "name": "WISH",
       "url": "https://wish.ivai.app",
       "cat": "Health AI",
-      "logo": "wish.svg",
+      "logo": "wish.png",
       "desc": "Receipt photo becomes structured expense, feeding three AI assistants.",
       "tags": "ocr mobile finance",
       "health": null
@@ -26,7 +26,7 @@
       "name": "IVAI Stock",
       "url": "https://idxstock.ivai.app",
       "cat": "Health AI",
-      "logo": "idxstock.svg",
+      "logo": "idxstock.png",
       "desc": "Market intelligence agent: watchlists, fundamentals, price action.",
       "tags": "finance agent signals",
       "health": "/api/health"
@@ -106,7 +106,7 @@
       "name": "IvanMD Clinic",
       "url": "https://ivanmd.ivanwilliamharsono.com",
       "cat": "Clinical",
-      "logo": "clinic.svg",
+      "logo": "clinic.png",
       "desc": "The clinic build of IvanMD running on its own domain.",
       "tags": "emr clinic",
       "health": "/health"
