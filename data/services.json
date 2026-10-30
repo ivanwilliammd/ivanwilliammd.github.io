@@ -1,0 +1,167 @@
+{
+  "updated": "2026-10-29",
+  "services": [
+    {
+      "slug": "ivai",
+      "name": "IVAI",
+      "url": "https://ivai.app",
+      "cat": "Health AI",
+      "logo": "ivai.ico",
+      "desc": "Custom AI for health: assistants, agents, API integrations.",
+      "tags": "ai agent llm"
+    },
+    {
+      "slug": "wish",
+      "name": "WISH",
+      "url": "https://wish.ivai.app",
+      "cat": "Health AI",
+      "logo": "wish.ico",
+      "desc": "Receipt photo becomes structured expense, feeding three AI assistants.",
+      "tags": "ocr mobile finance"
+    },
+    {
+      "slug": "idxstock",
+      "name": "IVAI Stock",
+      "url": "https://idxstock.ivai.app",
+      "cat": "Health AI",
+      "logo": null,
+      "desc": "Market intelligence agent: watchlists, fundamentals, price action.",
+      "tags": "finance agent signals"
+    },
+    {
+      "slug": "claim",
+      "name": "SmartClaim",
+      "url": "https://claim.ivanmd.id",
+      "cat": "Health AI",
+      "logo": "claim.ico",
+      "desc": "Claim integrity check before submission — ICD-10, ICD-9-CM, INA-CBG.",
+      "tags": "casemix claim icd"
+    },
+    {
+      "slug": "terminology",
+      "name": "SmarTerm",
+      "url": "https://terminology.ivanmd.id",
+      "cat": "Interoperability",
+      "logo": "terminology.ico",
+      "desc": "ICD-10, ICD-9-CM, LOINC, SNOMED CT, KFA and KPTL in one mapping engine.",
+      "tags": "terminology loinc snomed kfa"
+    },
+    {
+      "slug": "fusion",
+      "name": "Fusion FHIR",
+      "url": "https://fusion.ivanmd.id",
+      "cat": "Interoperability",
+      "logo": "fusion.ico",
+      "desc": "FHIR facade and resource API for the whole ecosystem.",
+      "tags": "fhir r4 api"
+    },
+    {
+      "slug": "transformer",
+      "name": "Transformer",
+      "url": "https://transformer.ivanmd.id",
+      "cat": "Interoperability",
+      "logo": "transformer.ico",
+      "desc": "Mapping layer fanning one payload out to several FHIR destinations.",
+      "tags": "fhir mapping gateway"
+    },
+    {
+      "slug": "auth",
+      "name": "IvanMD Identity",
+      "url": "https://auth.ivanmd.id",
+      "cat": "Interoperability",
+      "logo": null,
+      "desc": "Single sign-on (OIDC, Passport) for every ivanmd.id application.",
+      "tags": "oidc sso auth"
+    },
+    {
+      "slug": "cms",
+      "name": "CMS",
+      "url": "https://cms.ivanmd.id",
+      "cat": "Interoperability",
+      "logo": "cms.ico",
+      "desc": "Content and portfolio management backend.",
+      "tags": "cms laravel"
+    },
+    {
+      "slug": "ivanmd",
+      "name": "IvanMD",
+      "url": "https://ivanmd.id",
+      "cat": "Clinical",
+      "logo": "ivanmd.ico",
+      "desc": "Medical record, teleconsultation and appointments (web + Android).",
+      "tags": "emr telemedicine android"
+    },
+    {
+      "slug": "clinic",
+      "name": "IvanMD Clinic",
+      "url": "https://ivanmd.ivanwilliamharsono.com",
+      "cat": "Clinical",
+      "logo": null,
+      "desc": "The clinic build of IvanMD running on its own domain.",
+      "tags": "emr clinic"
+    },
+    {
+      "slug": "clinix",
+      "name": "Clinix",
+      "url": "https://clinix.meditechku.com",
+      "cat": "Clinical",
+      "logo": "clinix.ico",
+      "desc": "Clinical pathology portfolio and laboratory reporting workflow.",
+      "tags": "laboratory lis pathology"
+    },
+    {
+      "slug": "spectra",
+      "name": "SPECTRA",
+      "url": "https://spectra.meditechku.com",
+      "cat": "Clinical",
+      "logo": null,
+      "desc": "Multitenant stock, ERP, POS and CRM for healthcare units.",
+      "tags": "erp pos stock crm"
+    },
+    {
+      "slug": "pay",
+      "name": "Pay",
+      "url": "https://pay.meditechku.com",
+      "cat": "Commerce",
+      "logo": null,
+      "desc": "Payments and merchant settlement inside the ecosystem.",
+      "tags": "payment midtrans"
+    },
+    {
+      "slug": "link",
+      "name": "IVAI Link",
+      "url": "https://link.ivai.app",
+      "cat": "Commerce",
+      "logo": "link.ico",
+      "desc": "Invitation-only short links with QR and click analytics.",
+      "tags": "url shortener qr analytics"
+    },
+    {
+      "slug": "idi",
+      "name": "IDI Banten",
+      "url": "https://www.idiwilayahbanten.or.id",
+      "cat": "Community",
+      "logo": "idi.ico",
+      "desc": "Branch organisation profile with a publication CMS.",
+      "tags": "organisation supabase nextjs"
+    },
+    {
+      "slug": "risingstar",
+      "name": "Rising Star",
+      "url": "https://risingstar.ivanwilliamharsono.com",
+      "cat": "Community",
+      "logo": null,
+      "desc": "Tutoring services, student management and course pages.",
+      "tags": "education landing"
+    },
+    {
+      "slug": "portfolio",
+      "name": "Portfolio",
+      "url": "https://ivanwilliamharsono.com",
+      "cat": "Profile",
+      "logo": null,
+      "desc": "The full portfolio: 22 projects, publications, experience.",
+      "tags": "cv publications portfolio"
+    }
+  ]
+}

@@ -29,6 +29,29 @@ Edit the `APPS` array in `assets/js/app.js`:
 Drop the logo into `assets/img/apps/` with the same file name. Keep `desc` to one line: the card is
 meant to be scanned, not read.
 
+## Uptime API
+
+`status.json` is a static JSON endpoint regenerated every 15 minutes by
+[`.github/workflows/uptime.yml`](.github/workflows/uptime.yml):
+
+```json
+{
+  "generated_at": "2026-10-30T00:45:27Z",
+  "checked": 18,
+  "up": 18,
+  "services": [
+    { "slug": "ivai", "name": "IVAI", "url": "https://ivai.app", "ok": true,
+      "code": 200, "latency_ms": 312, "uptime_24h": 100.0, "uptime_7d": 100.0, "samples": 96 }
+  ]
+}
+```
+
+- `ok` = HTTP < 500. A 401/403 still counts as up: an app asking for login is alive.
+- `uptime_24h` / `uptime_7d` = share of successful probes; `null` until four samples exist —
+  a single ping is not 100%.
+- History (672 samples ≈ 7 days per service) lives in `data/history.json`.
+- Add or change a service in `data/services.json`; the page and the pinger both read that file.
+
 ## How the status dots work
 
 Each card issues a `fetch(url, { mode: "no-cors" })` against the service's **own** origin. A resolved

@@ -1,0 +1,205 @@
+{
+  "generated_at": "2026-10-30T00:45:27Z",
+  "checked": 18,
+  "up": 18,
+  "services": [
+    {
+      "slug": "ivai",
+      "name": "IVAI",
+      "url": "https://ivai.app",
+      "ok": true,
+      "code": 200,
+      "latency_ms": 312,
+      "uptime_24h": null,
+      "uptime_7d": null,
+      "samples": 2
+    },
+    {
+      "slug": "wish",
+      "name": "WISH",
+      "url": "https://wish.ivai.app",
+      "ok": true,
+      "code": 200,
+      "latency_ms": 404,
+      "uptime_24h": null,
+      "uptime_7d": null,
+      "samples": 2
+    },
+    {
+      "slug": "idxstock",
+      "name": "IVAI Stock",
+      "url": "https://idxstock.ivai.app",
+      "ok": true,
+      "code": 200,
+      "latency_ms": 2625,
+      "uptime_24h": null,
+      "uptime_7d": null,
+      "samples": 2
+    },
+    {
+      "slug": "claim",
+      "name": "SmartClaim",
+      "url": "https://claim.ivanmd.id",
+      "ok": true,
+      "code": 200,
+      "latency_ms": 1073,
+      "uptime_24h": null,
+      "uptime_7d": null,
+      "samples": 2
+    },
+    {
+      "slug": "terminology",
+      "name": "SmarTerm",
+      "url": "https://terminology.ivanmd.id",
+      "ok": true,
+      "code": 200,
+      "latency_ms": 1186,
+      "uptime_24h": null,
+      "uptime_7d": null,
+      "samples": 2
+    },
+    {
+      "slug": "fusion",
+      "name": "Fusion FHIR",
+      "url": "https://fusion.ivanmd.id",
+      "ok": true,
+      "code": 200,
+      "latency_ms": 321,
+      "uptime_24h": null,
+      "uptime_7d": null,
+      "samples": 2
+    },
+    {
+      "slug": "transformer",
+      "name": "Transformer",
+      "url": "https://transformer.ivanmd.id",
+      "ok": true,
+      "code": 200,
+      "latency_ms": 499,
+      "uptime_24h": null,
+      "uptime_7d": null,
+      "samples": 2
+    },
+    {
+      "slug": "auth",
+      "name": "IvanMD Identity",
+      "url": "https://auth.ivanmd.id",
+      "ok": true,
+      "code": 200,
+      "latency_ms": 2169,
+      "uptime_24h": null,
+      "uptime_7d": null,
+      "samples": 2
+    },
+    {
+      "slug": "cms",
+      "name": "CMS",
+      "url": "https://cms.ivanmd.id",
+      "ok": true,
+      "code": 200,
+      "latency_ms": 851,
+      "uptime_24h": null,
+      "uptime_7d": null,
+      "samples": 2
+    },
+    {
+      "slug": "ivanmd",
+      "name": "IvanMD",
+      "url": "https://ivanmd.id",
+      "ok": true,
+      "code": 200,
+      "latency_ms": 71,
+      "uptime_24h": null,
+      "uptime_7d": null,
+      "samples": 2
+    },
+    {
+      "slug": "clinic",
+      "name": "IvanMD Clinic",
+      "url": "https://ivanmd.ivanwilliamharsono.com",
+      "ok": true,
+      "code": 200,
+      "latency_ms": 2891,
+      "uptime_24h": null,
+      "uptime_7d": null,
+      "samples": 2
+    },
+    {
+      "slug": "clinix",
+      "name": "Clinix",
+      "url": "https://clinix.meditechku.com",
+      "ok": true,
+      "code": 200,
+      "latency_ms": 2155,
+      "uptime_24h": null,
+      "uptime_7d": null,
+      "samples": 2
+    },
+    {
+      "slug": "spectra",
+      "name": "SPECTRA",
+      "url": "https://spectra.meditechku.com",
+      "ok": true,
+      "code": 200,
+      "latency_ms": 1296,
+      "uptime_24h": null,
+      "uptime_7d": null,
+      "samples": 2
+    },
+    {
+      "slug": "pay",
+      "name": "Pay",
+      "url": "https://pay.meditechku.com",
+      "ok": true,
+      "code": 200,
+      "latency_ms": 2035,
+      "uptime_24h": null,
+      "uptime_7d": null,
+      "samples": 2
+    },
+    {
+      "slug": "link",
+      "name": "IVAI Link",
+      "url": "https://link.ivai.app",
+      "ok": true,
+      "code": 200,
+      "latency_ms": 138,
+      "uptime_24h": null,
+      "uptime_7d": null,
+      "samples": 2
+    },
+    {
+      "slug": "idi",
+      "name": "IDI Banten",
+      "url": "https://www.idiwilayahbanten.or.id",
+      "ok": true,
+      "code": 200,
+      "latency_ms": 113,
+      "uptime_24h": null,
+      "uptime_7d": null,
+      "samples": 2
+    },
+    {
+      "slug": "risingstar",
+      "name": "Rising Star",
+      "url": "https://risingstar.ivanwilliamharsono.com",
+      "ok": true,
+      "code": 200,
+      "latency_ms": 954,
+      "uptime_24h": null,
+      "uptime_7d": null,
+      "samples": 2
+    },
+    {
+      "slug": "portfolio",
+      "name": "Portfolio",
+      "url": "https://ivanwilliamharsono.com",
+      "ok": true,
+      "code": 200,
+      "latency_ms": 490,
+      "uptime_24h": null,
+      "uptime_7d": null,
+      "samples": 2
+    }
+  ]
+}

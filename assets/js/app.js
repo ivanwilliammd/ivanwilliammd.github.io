@@ -1,42 +1,8 @@
-/* Production pit stop — logika tanpa dependensi.
-   Data di bawah adalah satu-satunya sumber kebenaran daftar layanan. */
-
-const APPS = [
-  { name: "IVAI", url: "https://ivai.app", cat: "Health AI", logo: "ivai.ico",
-    desc: "Custom AI for health: assistants, agents, API integrations.", tags: "ai agent llm" },
-  { name: "WISH", url: "https://wish.ivai.app", cat: "Health AI", logo: "wish.ico",
-    desc: "Receipt photo becomes structured expense, feeding three AI assistants.", tags: "ocr mobile finance" },
-  { name: "IVAI Stock", url: "https://idxstock.ivai.app", cat: "Health AI", logo: null,
-    desc: "Market intelligence agent: watchlists, fundamentals, price action.", tags: "finance agent signals" },
-  { name: "SmartClaim", url: "https://claim.ivanmd.id", cat: "Health AI", logo: "claim.ico",
-    desc: "Claim integrity check before submission — ICD-10, ICD-9-CM, INA-CBG.", tags: "casemix claim icd" },
-  { name: "SmarTerm", url: "https://terminology.ivanmd.id", cat: "Interoperability", logo: "terminology.ico",
-    desc: "ICD-10, ICD-9-CM, LOINC, SNOMED CT, KFA and KPTL in one mapping engine.", tags: "terminology loinc snomed kfa" },
-  { name: "Fusion FHIR", url: "https://fusion.ivanmd.id", cat: "Interoperability", logo: "fusion.ico",
-    desc: "FHIR facade and resource API for the whole ecosystem.", tags: "fhir r4 api" },
-  { name: "Transformer", url: "https://transformer.ivanmd.id", cat: "Interoperability", logo: "transformer.ico",
-    desc: "Mapping layer fanning one payload out to several FHIR destinations.", tags: "fhir mapping gateway" },
-  { name: "IvanMD Identity", url: "https://auth.ivanmd.id", cat: "Interoperability", logo: null,
-    desc: "Single sign-on (OIDC, Passport) for every ivanmd.id application.", tags: "oidc sso auth" },
-  { name: "CMS", url: "https://cms.ivanmd.id", cat: "Interoperability", logo: "cms.ico",
-    desc: "Content and portfolio management backend.", tags: "cms laravel" },
-  { name: "IvanMD", url: "https://ivanmd.id", cat: "Clinical", logo: "ivanmd.ico",
-    desc: "Medical record, teleconsultation and appointments (web + Android).", tags: "emr telemedicine android" },
-  { name: "Clinix", url: "https://clinix.meditechku.com", cat: "Clinical", logo: "clinix.ico",
-    desc: "Clinical pathology portfolio and laboratory reporting workflow.", tags: "laboratory lis pathology" },
-  { name: "SPECTRA", url: "https://spectra.meditechku.com", cat: "Clinical", logo: null,
-    desc: "Multitenant stock, ERP, POS and CRM for healthcare units.", tags: "erp pos stock crm" },
-  { name: "Pay", url: "https://pay.meditechku.com", cat: "Commerce", logo: null,
-    desc: "Payments and merchant settlement inside the ecosystem.", tags: "payment midtrans" },
-  { name: "IVAI Link", url: "https://link.ivai.app", cat: "Commerce", logo: "link.ico",
-    desc: "Invitation-only short links with QR and click analytics.", tags: "url shortener qr analytics" },
-  { name: "IDI Banten", url: "https://www.idiwilayahbanten.or.id", cat: "Community", logo: "idi.ico",
-    desc: "Branch organisation profile with a publication CMS.", tags: "organisation supabase nextjs" },
-  { name: "Rising Star", url: "https://risingstar.ivanwilliamharsono.com", cat: "Community", logo: null,
-    desc: "Tutoring services, student management and course pages.", tags: "education landing" },
-  { name: "Portfolio", url: "https://ivanwilliamharsono.com", cat: "Profile", logo: null,
-    desc: "The full portfolio: 22 projects, publications, experience.", tags: "cv publications portfolio" },
-];
+/* Production pit stop — tanpa dependensi.
+   Dua sumber data:
+     data/services.json  daftar layanan (satu-satunya tempat menambah layanan)
+     status.json         hasil ping terjadwal (.github/workflows/uptime.yml)
+   Bila status.json belum ada, halaman jatuh ke pemeriksaan dari peramban. */
 
 const grid = document.getElementById("apps");
 const chipsBox = document.getElementById("chips");
@@ -46,32 +12,38 @@ const checkedEl = document.getElementById("checked");
 const emptyEl = document.getElementById("empty");
 const yearEl = document.getElementById("year");
 
+let APPS = [];
+const STATUS = new Map();
 let activeCat = "All";
 let term = "";
 
-const cats = ["All", ...new Set(APPS.map((a) => a.cat))];
+const cats = () => ["All", ...new Set(APPS.map((a) => a.cat))];
 
 function initials(name) {
   const parts = name.replace(/[^A-Za-z0-9 ]/g, "").split(/\s+/).filter(Boolean);
   return (parts.length > 1 ? parts[0][0] + parts[1][0] : parts[0].slice(0, 2)).toUpperCase();
 }
 
-function host(url) {
-  return url.replace(/^https?:\/\//, "").replace(/\/$/, "");
-}
+const host = (url) => url.replace(/^https?:\/\//, "").replace(/\/$/, "");
 
 function matches(app) {
   const hay = [app.name, app.cat, app.desc, app.tags, host(app.url)].join(" ").toLowerCase();
-  const okCat = activeCat === "All" || app.cat === activeCat;
-  return okCat && hay.includes(term);
+  return (activeCat === "All" || app.cat === activeCat) && hay.includes(term);
+}
+
+function statusOf(app) {
+  const live = STATUS.get(app.slug);
+  if (!live) return { state: "unknown", text: "memeriksa…" };
+  const up24 = typeof live.uptime_24h === "number" ? ` · ${live.uptime_24h}% 24j` : "";
+  return { state: live.ok ? "ok" : "down", text: `${live.code || "—"} · ${live.latency_ms} ms${up24}` };
 }
 
 function card(app) {
   const el = document.createElement("a");
+  const st = statusOf(app);
   el.className = "card";
   el.href = app.url;
   el.rel = "noopener";
-  el.dataset.hay = [app.name, app.cat, app.desc, app.tags].join(" ").toLowerCase();
 
   const logo = app.logo
     ? `<img src="assets/img/apps/${app.logo}" alt="" loading="lazy" width="26" height="26">`
@@ -89,7 +61,7 @@ function card(app) {
     <p class="card-desc">${app.desc}</p>
     <div class="card-foot">
       <span class="host">${host(app.url)}</span>
-      <span class="status"><span class="dot" data-state="unknown"></span><span class="status-text">checking…</span></span>
+      <span class="status"><span class="dot" data-state="${st.state}"></span><span class="status-text">${st.text}</span></span>
     </div>`;
 
   el.addEventListener("pointermove", (e) => {
@@ -119,12 +91,11 @@ function render() {
   const shown = grid.children.length;
   countEl.textContent = `${shown} of ${APPS.length} services`;
   emptyEl.hidden = shown !== 0;
-  observeStatus();
 }
 
 function buildChips() {
   chipsBox.replaceChildren(
-    ...cats.map((cat) => {
+    ...cats().map((cat) => {
       const b = document.createElement("button");
       b.className = "chip";
       b.type = "button";
@@ -140,33 +111,45 @@ function buildChips() {
   );
 }
 
-/* Status: permintaan no-cors ke origin layanan itu sendiri.
-   Opaque response = jaringan menjawab; reject = tidak; tidak didukung = unknown. */
-function probe(app, dot, label) {
-  const ctrl = new AbortController();
-  const t = setTimeout(() => ctrl.abort(), 6000);
-  fetch(app.url, { mode: "no-cors", cache: "no-store", signal: ctrl.signal })
-    .then(() => { dot.dataset.state = "ok"; label.textContent = "reachable"; })
-    .catch((err) => {
-      const blocked = err && err.name === "AbortError";
-      dot.dataset.state = blocked ? "down" : "down";
-      label.textContent = blocked ? "timeout" : "no answer";
-    })
-    .finally(() => clearTimeout(t));
-}
-
-function observeStatus() {
-  const nodes = [...grid.querySelectorAll(".card")];
-  nodes.forEach((el) => {
-    const app = APPS.find((a) => a.url === el.href || a.url === el.getAttribute("href"));
-    if (!app) return;
-    probe(app, el.querySelector(".dot"), el.querySelector(".status-text"));
+/* Cadangan: tanpa status.json, periksa langsung dari peramban (no-cors). */
+function probeInBrowser() {
+  APPS.forEach((app) => {
+    const ctrl = new AbortController();
+    setTimeout(() => ctrl.abort(), 6000);
+    fetch(app.url, { mode: "no-cors", cache: "no-store", signal: ctrl.signal })
+      .then(() => STATUS.set(app.slug, { ok: true, code: 0, latency_ms: 0 }))
+      .catch(() => STATUS.set(app.slug, { ok: false, code: 0, latency_ms: 0 }));
   });
-  checkedEl.textContent = `checked ${new Date().toLocaleTimeString()}`;
+  checkedEl.textContent = "status: diperiksa peramban";
 }
 
-/* pencarian, pintasan papan tombol, tema */
-q.addEventListener("input", () => { term = q.value.trim().toLowerCase(); render(); });
+async function load() {
+  try {
+    const [svc, st] = await Promise.all([
+      fetch("data/services.json", { cache: "no-store" }).then((r) => r.json()),
+      fetch(`status.json?t=${Date.now()}`, { cache: "no-store" })
+        .then((r) => (r.ok ? r.json() : null))
+        .catch(() => null),
+    ]);
+    APPS = svc.services || [];
+    if (st && Array.isArray(st.services)) {
+      st.services.forEach((s) => STATUS.set(s.slug, s));
+      checkedEl.textContent = `${st.up}/${st.checked} up · ${new Date(st.generated_at).toLocaleTimeString()}`;
+    } else {
+      probeInBrowser();
+    }
+  } catch (err) {
+    countEl.textContent = "daftar layanan tidak terbaca";
+    return;
+  }
+  buildChips();
+  render();
+}
+
+q.addEventListener("input", () => {
+  term = q.value.trim().toLowerCase();
+  render();
+});
 
 document.addEventListener("keydown", (e) => {
   const typing = /^(INPUT|TEXTAREA)$/.test(document.activeElement.tagName);
@@ -186,8 +169,7 @@ function toggleTheme() {
 document.getElementById("theme").addEventListener("click", toggleTheme);
 applyTheme(localStorage.getItem("theme") || "dark");
 
-document.getElementById("recheck").addEventListener("click", observeStatus);
+document.getElementById("recheck").addEventListener("click", () => location.reload());
 yearEl.textContent = String(new Date().getFullYear());
 
-buildChips();
-render();
+load();
