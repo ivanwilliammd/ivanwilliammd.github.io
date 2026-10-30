@@ -86,7 +86,7 @@
       "name": "CMS",
       "url": "https://cms.ivanmd.id",
       "cat": "Interoperability",
-      "logo": "cms.svg",
+      "logo": "cms.png",
       "desc": "Content and portfolio management backend.",
       "tags": "cms laravel",
       "health": "/up"
@@ -116,7 +116,7 @@
       "name": "Clinix",
       "url": "https://clinix.meditechku.com",
       "cat": "Clinical",
-      "logo": "clinix.svg",
+      "logo": "clinix.png",
       "desc": "Clinical pathology portfolio and laboratory reporting workflow.",
       "tags": "laboratory lis pathology",
       "health": "/health"
@@ -166,7 +166,7 @@
       "name": "Rising Star",
       "url": "https://risingstar.ivanwilliamharsono.com",
       "cat": "Community",
-      "logo": "risingstar.svg",
+      "logo": "risingstar.png",
       "desc": "Tutoring services, student management and course pages.",
       "tags": "education landing",
       "health": null

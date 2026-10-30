@@ -1,9 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="SPECTRA">
-  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#0ea5a2"/><stop offset="1" stop-color="#0b7c8f"/>
-  </linearGradient></defs>
-  <rect width="64" height="64" rx="16" fill="url(#g)"/>
-  <text x="32" y="33" text-anchor="middle" dominant-baseline="middle"
-        font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="700"
-        letter-spacing="0.5" fill="#ffffff">SP</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <rect width="256" height="256" rx="56" fill="#0f1e24"/>
+  <g transform="translate(128.0,128.0) scale(0.860) translate(-128.0,-128.0)">
+    <polygon fill="#25c69d" points="16.00,38 45.43,38 96.57,197 84.00,197"/>
+    <polygon fill="#22c1c3" points="48.43,38 77.86,38 109.14,197 96.57,197"/>
+    <polygon fill="#3b9ae1" points="80.86,38 110.29,38 121.71,197 109.14,197"/>
+    <polygon fill="#5b6ee1" points="113.29,38 142.71,38 134.29,197 121.71,197"/>
+    <polygon fill="#8264e0" points="145.71,38 175.14,38 146.86,197 134.29,197"/>
+    <polygon fill="#b45cd6" points="178.14,38 207.57,38 159.43,197 146.86,197"/>
+    <polygon fill="#ef5da8" points="210.57,38 240.00,38 172.00,197 159.43,197"/>
+    <rect x="70" y="204" width="116" height="14" rx="7" fill="#25c69d"/>
+    </g>
 </svg>
