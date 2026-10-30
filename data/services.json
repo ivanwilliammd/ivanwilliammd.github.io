@@ -8,7 +8,8 @@
       "cat": "Health AI",
       "logo": "ivai.ico",
       "desc": "Custom AI for health: assistants, agents, API integrations.",
-      "tags": "ai agent llm"
+      "tags": "ai agent llm",
+      "health": "/up"
     },
     {
       "slug": "wish",
@@ -17,7 +18,8 @@
       "cat": "Health AI",
       "logo": "wish.ico",
       "desc": "Receipt photo becomes structured expense, feeding three AI assistants.",
-      "tags": "ocr mobile finance"
+      "tags": "ocr mobile finance",
+      "health": null
     },
     {
       "slug": "idxstock",
@@ -26,7 +28,8 @@
       "cat": "Health AI",
       "logo": null,
       "desc": "Market intelligence agent: watchlists, fundamentals, price action.",
-      "tags": "finance agent signals"
+      "tags": "finance agent signals",
+      "health": "/api/health"
     },
     {
       "slug": "claim",
@@ -35,7 +38,8 @@
       "cat": "Health AI",
       "logo": "claim.ico",
       "desc": "Claim integrity check before submission — ICD-10, ICD-9-CM, INA-CBG.",
-      "tags": "casemix claim icd"
+      "tags": "casemix claim icd",
+      "health": "/up"
     },
     {
       "slug": "terminology",
@@ -44,7 +48,8 @@
       "cat": "Interoperability",
       "logo": "terminology.ico",
       "desc": "ICD-10, ICD-9-CM, LOINC, SNOMED CT, KFA and KPTL in one mapping engine.",
-      "tags": "terminology loinc snomed kfa"
+      "tags": "terminology loinc snomed kfa",
+      "health": "/up"
     },
     {
       "slug": "fusion",
@@ -53,7 +58,8 @@
       "cat": "Interoperability",
       "logo": "fusion.ico",
       "desc": "FHIR facade and resource API for the whole ecosystem.",
-      "tags": "fhir r4 api"
+      "tags": "fhir r4 api",
+      "health": "/health"
     },
     {
       "slug": "transformer",
@@ -62,7 +68,8 @@
       "cat": "Interoperability",
       "logo": "transformer.ico",
       "desc": "Mapping layer fanning one payload out to several FHIR destinations.",
-      "tags": "fhir mapping gateway"
+      "tags": "fhir mapping gateway",
+      "health": "/api/health"
     },
     {
       "slug": "auth",
@@ -71,7 +78,8 @@
       "cat": "Interoperability",
       "logo": null,
       "desc": "Single sign-on (OIDC, Passport) for every ivanmd.id application.",
-      "tags": "oidc sso auth"
+      "tags": "oidc sso auth",
+      "health": "/health"
     },
     {
       "slug": "cms",
@@ -80,7 +88,8 @@
       "cat": "Interoperability",
       "logo": "cms.ico",
       "desc": "Content and portfolio management backend.",
-      "tags": "cms laravel"
+      "tags": "cms laravel",
+      "health": "/up"
     },
     {
       "slug": "ivanmd",
@@ -89,7 +98,8 @@
       "cat": "Clinical",
       "logo": "ivanmd.ico",
       "desc": "Medical record, teleconsultation and appointments (web + Android).",
-      "tags": "emr telemedicine android"
+      "tags": "emr telemedicine android",
+      "health": null
     },
     {
       "slug": "clinic",
@@ -98,7 +108,8 @@
       "cat": "Clinical",
       "logo": null,
       "desc": "The clinic build of IvanMD running on its own domain.",
-      "tags": "emr clinic"
+      "tags": "emr clinic",
+      "health": "/health"
     },
     {
       "slug": "clinix",
@@ -107,7 +118,8 @@
       "cat": "Clinical",
       "logo": "clinix.ico",
       "desc": "Clinical pathology portfolio and laboratory reporting workflow.",
-      "tags": "laboratory lis pathology"
+      "tags": "laboratory lis pathology",
+      "health": "/health"
     },
     {
       "slug": "spectra",
@@ -116,7 +128,8 @@
       "cat": "Clinical",
       "logo": null,
       "desc": "Multitenant stock, ERP, POS and CRM for healthcare units.",
-      "tags": "erp pos stock crm"
+      "tags": "erp pos stock crm",
+      "health": "/health"
     },
     {
       "slug": "pay",
@@ -125,7 +138,8 @@
       "cat": "Commerce",
       "logo": null,
       "desc": "Payments and merchant settlement inside the ecosystem.",
-      "tags": "payment midtrans"
+      "tags": "payment midtrans",
+      "health": "/health"
     },
     {
       "slug": "link",
@@ -134,7 +148,8 @@
       "cat": "Commerce",
       "logo": "link.ico",
       "desc": "Invitation-only short links with QR and click analytics.",
-      "tags": "url shortener qr analytics"
+      "tags": "url shortener qr analytics",
+      "health": null
     },
     {
       "slug": "idi",
@@ -143,7 +158,8 @@
       "cat": "Community",
       "logo": "idi.ico",
       "desc": "Branch organisation profile with a publication CMS.",
-      "tags": "organisation supabase nextjs"
+      "tags": "organisation supabase nextjs",
+      "health": null
     },
     {
       "slug": "risingstar",
@@ -152,7 +168,8 @@
       "cat": "Community",
       "logo": null,
       "desc": "Tutoring services, student management and course pages.",
-      "tags": "education landing"
+      "tags": "education landing",
+      "health": null
     },
     {
       "slug": "portfolio",
@@ -161,7 +178,8 @@
       "cat": "Profile",
       "logo": null,
       "desc": "The full portfolio: 22 projects, publications, experience.",
-      "tags": "cv publications portfolio"
+      "tags": "cv publications portfolio",
+      "health": null
     }
   ]
 }

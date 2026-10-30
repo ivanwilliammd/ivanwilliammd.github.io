@@ -32,21 +32,26 @@ DAY_SAMPLES = 96    # 24 jam
 UA = "Mozilla/5.0 (compatible; ivanwilliammd-uptime/1.0)"
 
 
-def probe(url: str) -> tuple[int, int]:
-    """(kode HTTP, latensi ms). 0 berarti tidak menjawab."""
+def probe(url: str) -> tuple[int, int, str]:
+    """(kode HTTP, latensi ms, potongan body). 0 berarti tidak menjawab."""
     started = time.time()
     req = urllib.request.Request(url, method="GET")
     req.add_header("User-Agent", UA)
     req.add_header("Accept", "text/html,*/*")
     try:
         with urllib.request.urlopen(req, timeout=TIMEOUT) as resp:
-            resp.read(256)
             code = resp.status
+            body = resp.read(2048).decode("utf-8", "replace")
     except urllib.error.HTTPError as err:
         code = err.code
+        try:
+            body = err.read(2048).decode("utf-8", "replace")
+        except Exception:
+            body = ""
     except Exception:
         code = 0
-    return code, int((time.time() - started) * 1000)
+        body = ""
+    return code, int((time.time() - started) * 1000), body
 
 
 def uptime(series: list, window: int | None) -> float | None:
@@ -65,13 +70,37 @@ def main() -> int:
     if not isinstance(history, dict):
         history = {}
 
+    def target(svc: dict) -> str:
+        """Endpoint /health bila dideklarasikan, kalau tidak halaman depan."""
+        path = svc.get("health")
+        return svc["url"].rstrip("/") + path if path else svc["url"]
+
     now = int(time.time())
     with ThreadPoolExecutor(max_workers=8) as pool:
-        results = list(pool.map(lambda s: probe(s["url"]), services))
+        results = list(pool.map(lambda s: (probe(target(s)), target(s)), services))
 
     out = []
-    for svc, (code, ms) in zip(services, results):
-        ok = code != 0 and code < 500
+    for svc, ((code, ms, body), checked) in zip(services, results):
+        if code in (404, 405) and svc.get("health"):
+            # Endpoint belum ter-deploy di server itu: ukur halaman depan, dan catat.
+            code, ms, body = probe(svc["url"])
+            checked = svc["url"]
+
+        # Health yang benar menjawab JSON berisi "status". HTML 200 (halaman fallback)
+        # tidak dihitung sebagai bukti sehat — hanya reachable.
+        verified = False
+        app_status = None
+        try:
+            payload = json.loads(body)
+            if isinstance(payload, dict) and "status" in payload:
+                verified = True
+                app_status = str(payload.get("status"))
+        except Exception:
+            pass
+
+        BAD_WORDS = ("down", "degraded", "error", "fail", "unhealthy", "offline")
+        bad_reported = bool(app_status) and any(w in app_status.lower() for w in BAD_WORDS)
+        ok = code != 0 and code < 500 and not bad_reported
         series = history.get(svc["slug"], [])
         series.append([now, 1 if ok else 0, ms])
         history[svc["slug"]] = series[-KEEP:]
@@ -79,7 +108,10 @@ def main() -> int:
             "slug": svc["slug"],
             "name": svc["name"],
             "url": svc["url"],
+            "checked": checked,
             "ok": ok,
+            "verified": verified,
+            "app_status": app_status,
             "code": code,
             "latency_ms": ms,
             "uptime_24h": uptime(history[svc["slug"]], DAY_SAMPLES),

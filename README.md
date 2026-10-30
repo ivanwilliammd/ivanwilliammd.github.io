@@ -46,7 +46,11 @@ meant to be scanned, not read.
 }
 ```
 
-- `ok` = HTTP < 500. A 401/403 still counts as up: an app asking for login is alive.
+- Each service can declare a `health` path (`/health`, `/up`, `/api/health`); the pinger hits that
+  instead of the front page and falls back to `url` only when the endpoint answers 404/405.
+- `ok` = HTTP < 500 **and** the app does not report a bad status. A JSON body with a `status` field
+  makes the probe `verified: true`; a 200 that is just the HTML front page is not proof of health.
+  401/403 still count as up: an app asking for login is alive.
 - `uptime_24h` / `uptime_7d` = share of successful probes; `null` until four samples exist —
   a single ping is not 100%.
 - History (672 samples ≈ 7 days per service) lives in `data/history.json`.
