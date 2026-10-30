@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T06:33:37Z",
+  "generated_at": "2026-10-30T13:30:51Z",
   "checked": 18,
   "up": 17,
   "services": [
@@ -12,10 +12,10 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 979,
+      "latency_ms": 995,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 6
+      "samples": 7
     },
     {
       "slug": "wish",
@@ -26,10 +26,10 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 525,
+      "latency_ms": 321,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 6
+      "samples": 7
     },
     {
       "slug": "idxstock",
@@ -40,10 +40,10 @@
       "verified": true,
       "app_status": "Server is online",
       "code": 200,
-      "latency_ms": 1915,
+      "latency_ms": 2005,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 6
+      "samples": 7
     },
     {
       "slug": "claim",
@@ -54,10 +54,10 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 1226,
+      "latency_ms": 1139,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 6
+      "samples": 7
     },
     {
       "slug": "terminology",
@@ -68,10 +68,10 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 1138,
+      "latency_ms": 1118,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 6
+      "samples": 7
     },
     {
       "slug": "fusion",
@@ -82,10 +82,10 @@
       "verified": true,
       "app_status": "ok",
       "code": 200,
-      "latency_ms": 1030,
+      "latency_ms": 979,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 6
+      "samples": 7
     },
     {
       "slug": "transformer",
@@ -96,10 +96,10 @@
       "verified": true,
       "app_status": "degraded",
       "code": 503,
-      "latency_ms": 1247,
-      "uptime_24h": 66.67,
-      "uptime_7d": 66.67,
-      "samples": 6
+      "latency_ms": 1356,
+      "uptime_24h": 57.14,
+      "uptime_7d": 57.14,
+      "samples": 7
     },
     {
       "slug": "auth",
@@ -110,10 +110,10 @@
       "verified": true,
       "app_status": "ok",
       "code": 200,
-      "latency_ms": 1661,
+      "latency_ms": 1559,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 6
+      "samples": 7
     },
     {
       "slug": "cms",
@@ -124,10 +124,10 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 921,
+      "latency_ms": 835,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 6
+      "samples": 7
     },
     {
       "slug": "ivanmd",
@@ -138,10 +138,10 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 67,
+      "latency_ms": 127,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 6
+      "samples": 7
     },
     {
       "slug": "clinic",
@@ -152,10 +152,10 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 976,
+      "latency_ms": 915,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 6
+      "samples": 7
     },
     {
       "slug": "clinix",
@@ -166,10 +166,10 @@
       "verified": true,
       "app_status": "ok",
       "code": 200,
-      "latency_ms": 1139,
+      "latency_ms": 1692,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 6
+      "samples": 7
     },
     {
       "slug": "spectra",
@@ -180,10 +180,10 @@
       "verified": true,
       "app_status": "ok",
       "code": 200,
-      "latency_ms": 1375,
+      "latency_ms": 2309,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 6
+      "samples": 7
     },
     {
       "slug": "pay",
@@ -194,10 +194,10 @@
       "verified": true,
       "app_status": "ok",
       "code": 200,
-      "latency_ms": 1434,
+      "latency_ms": 2078,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 6
+      "samples": 7
     },
     {
       "slug": "link",
@@ -208,10 +208,10 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 1490,
+      "latency_ms": 890,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 6
+      "samples": 7
     },
     {
       "slug": "idi",
@@ -222,10 +222,10 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 305,
+      "latency_ms": 246,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 6
+      "samples": 7
     },
     {
       "slug": "risingstar",
@@ -236,10 +236,10 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 1724,
+      "latency_ms": 1616,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 6
+      "samples": 7
     },
     {
       "slug": "portfolio",
@@ -250,10 +250,10 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 970,
+      "latency_ms": 1212,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 6
+      "samples": 7
     }
   ]
 }
