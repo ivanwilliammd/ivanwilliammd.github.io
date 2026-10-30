@@ -46,7 +46,7 @@ function card(app) {
   el.rel = "noopener";
 
   const logo = app.logo
-    ? `<img src="assets/img/apps/${app.logo}" alt="" loading="lazy" width="26" height="26">`
+    ? `<img src="assets/img/apps/${app.logo}" alt="" loading="lazy" width="42" height="42">`
     : `<span aria-hidden="true">${initials(app.name)}</span>`;
 
   el.innerHTML = `

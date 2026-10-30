@@ -6,7 +6,7 @@
       "name": "IVAI",
       "url": "https://ivai.app",
       "cat": "Health AI",
-      "logo": "ivai.ico",
+      "logo": "ivai.svg",
       "desc": "Custom AI for health: assistants, agents, API integrations.",
       "tags": "ai agent llm",
       "health": "/up"
@@ -16,7 +16,7 @@
       "name": "WISH",
       "url": "https://wish.ivai.app",
       "cat": "Health AI",
-      "logo": "wish.ico",
+      "logo": "wish.svg",
       "desc": "Receipt photo becomes structured expense, feeding three AI assistants.",
       "tags": "ocr mobile finance",
       "health": null
@@ -26,7 +26,7 @@
       "name": "IVAI Stock",
       "url": "https://idxstock.ivai.app",
       "cat": "Health AI",
-      "logo": null,
+      "logo": "idxstock.svg",
       "desc": "Market intelligence agent: watchlists, fundamentals, price action.",
       "tags": "finance agent signals",
       "health": "/api/health"
@@ -36,7 +36,7 @@
       "name": "SmartClaim",
       "url": "https://claim.ivanmd.id",
       "cat": "Health AI",
-      "logo": "claim.ico",
+      "logo": "claim.svg",
       "desc": "Claim integrity check before submission — ICD-10, ICD-9-CM, INA-CBG.",
       "tags": "casemix claim icd",
       "health": "/up"
@@ -46,7 +46,7 @@
       "name": "SmarTerm",
       "url": "https://terminology.ivanmd.id",
       "cat": "Interoperability",
-      "logo": "terminology.ico",
+      "logo": "terminology.svg",
       "desc": "ICD-10, ICD-9-CM, LOINC, SNOMED CT, KFA and KPTL in one mapping engine.",
       "tags": "terminology loinc snomed kfa",
       "health": "/up"
@@ -56,7 +56,7 @@
       "name": "Fusion FHIR",
       "url": "https://fusion.ivanmd.id",
       "cat": "Interoperability",
-      "logo": "fusion.ico",
+      "logo": "fusion.svg",
       "desc": "FHIR facade and resource API for the whole ecosystem.",
       "tags": "fhir r4 api",
       "health": "/health"
@@ -66,7 +66,7 @@
       "name": "Transformer",
       "url": "https://transformer.ivanmd.id",
       "cat": "Interoperability",
-      "logo": "transformer.ico",
+      "logo": "transformer.svg",
       "desc": "Mapping layer fanning one payload out to several FHIR destinations.",
       "tags": "fhir mapping gateway",
       "health": "/api/health"
@@ -76,7 +76,7 @@
       "name": "IvanMD Identity",
       "url": "https://auth.ivanmd.id",
       "cat": "Interoperability",
-      "logo": null,
+      "logo": "auth.svg",
       "desc": "Single sign-on (OIDC, Passport) for every ivanmd.id application.",
       "tags": "oidc sso auth",
       "health": "/health"
@@ -86,7 +86,7 @@
       "name": "CMS",
       "url": "https://cms.ivanmd.id",
       "cat": "Interoperability",
-      "logo": "cms.ico",
+      "logo": "cms.svg",
       "desc": "Content and portfolio management backend.",
       "tags": "cms laravel",
       "health": "/up"
@@ -96,7 +96,7 @@
       "name": "IvanMD",
       "url": "https://ivanmd.id",
       "cat": "Clinical",
-      "logo": "ivanmd.ico",
+      "logo": "ivanmd.svg",
       "desc": "Medical record, teleconsultation and appointments (web + Android).",
       "tags": "emr telemedicine android",
       "health": null
@@ -106,7 +106,7 @@
       "name": "IvanMD Clinic",
       "url": "https://ivanmd.ivanwilliamharsono.com",
       "cat": "Clinical",
-      "logo": null,
+      "logo": "clinic.svg",
       "desc": "The clinic build of IvanMD running on its own domain.",
       "tags": "emr clinic",
       "health": "/health"
@@ -116,7 +116,7 @@
       "name": "Clinix",
       "url": "https://clinix.meditechku.com",
       "cat": "Clinical",
-      "logo": "clinix.ico",
+      "logo": "clinix.svg",
       "desc": "Clinical pathology portfolio and laboratory reporting workflow.",
       "tags": "laboratory lis pathology",
       "health": "/health"
@@ -126,7 +126,7 @@
       "name": "SPECTRA",
       "url": "https://spectra.meditechku.com",
       "cat": "Clinical",
-      "logo": null,
+      "logo": "spectra.svg",
       "desc": "Multitenant stock, ERP, POS and CRM for healthcare units.",
       "tags": "erp pos stock crm",
       "health": "/health"
@@ -136,7 +136,7 @@
       "name": "Pay",
       "url": "https://pay.meditechku.com",
       "cat": "Commerce",
-      "logo": null,
+      "logo": "pay.svg",
       "desc": "Payments and merchant settlement inside the ecosystem.",
       "tags": "payment midtrans",
       "health": "/health"
@@ -146,7 +146,7 @@
       "name": "IVAI Link",
       "url": "https://link.ivai.app",
       "cat": "Commerce",
-      "logo": "link.ico",
+      "logo": "link.svg",
       "desc": "Invitation-only short links with QR and click analytics.",
       "tags": "url shortener qr analytics",
       "health": null
@@ -156,7 +156,7 @@
       "name": "IDI Banten",
       "url": "https://www.idiwilayahbanten.or.id",
       "cat": "Community",
-      "logo": "idi.ico",
+      "logo": "idi.svg",
       "desc": "Branch organisation profile with a publication CMS.",
       "tags": "organisation supabase nextjs",
       "health": null
@@ -166,7 +166,7 @@
       "name": "Rising Star",
       "url": "https://risingstar.ivanwilliamharsono.com",
       "cat": "Community",
-      "logo": null,
+      "logo": "risingstar.svg",
       "desc": "Tutoring services, student management and course pages.",
       "tags": "education landing",
       "health": null
@@ -176,7 +176,7 @@
       "name": "Portfolio",
       "url": "https://ivanwilliamharsono.com",
       "cat": "Profile",
-      "logo": null,
+      "logo": "portfolio.svg",
       "desc": "The full portfolio: 22 projects, publications, experience.",
       "tags": "cv publications portfolio",
       "health": null
