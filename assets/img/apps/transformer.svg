@@ -1,9 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Transformer">
-  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#4f7df3"/><stop offset="1" stop-color="#2f56c9"/>
-  </linearGradient></defs>
-  <rect width="64" height="64" rx="16" fill="url(#g)"/>
-  <text x="32" y="33" text-anchor="middle" dominant-baseline="middle"
-        font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="700"
-        letter-spacing="0.5" fill="#ffffff">TR</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="FHIR Transformer">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2bcca6"/><stop offset="0.55" stop-color="#1cae8c"/><stop offset="1" stop-color="#0a6f57"/>
+    </linearGradient>
+    <!-- Palang dilubangi; latar di belakangnya yang tampil, bukan cat. -->
+    <mask id="cut">
+      <rect x="25" y="23" width="27" height="27" rx="7.5" fill="#fff"/>
+      <path d="M38.5 30.5v12M32.5 36.5h12" stroke="#000" stroke-width="5.6" stroke-linecap="round"/>
+    </mask>
+  </defs>
+
+  <rect width="64" height="64" rx="15" fill="url(#g)"/>
+
+  <!-- Sebelum: bingkai kosong, data mentah. -->
+  <rect x="11" y="11" width="25" height="25" rx="6.5" fill="none" stroke="#ffffff" stroke-width="3.6" opacity="0.85"/>
+
+  <!-- Pemisah: garis bingkai belakang dipotong supaya tidak menembus palang. -->
+  <rect x="23" y="21" width="31" height="31" rx="10" fill="url(#g)"/>
+
+  <!-- Sesudah: bingkai terisi dengan palang sebagai ruang kosong. -->
+  <rect x="25" y="23" width="27" height="27" rx="7.5" fill="#ffffff" mask="url(#cut)"/>
 </svg>
