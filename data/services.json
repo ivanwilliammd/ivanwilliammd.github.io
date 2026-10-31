@@ -180,6 +180,26 @@
       "desc": "The full portfolio: 22 projects, publications, experience.",
       "tags": "cv publications portfolio",
       "health": null
+    },
+    {
+      "slug": "meditechku",
+      "name": "Meditechku",
+      "url": "https://meditechku.com",
+      "cat": "Company",
+      "logo": "meditechku.png",
+      "desc": "Company site of PT Meditech Konsulindo Utama — healthcare technology consulting and digital products.",
+      "tags": "company consulting healthcare",
+      "health": null
+    },
+    {
+      "slug": "cms-meditechku",
+      "name": "CMS Meditechku",
+      "url": "https://cms.meditechku.com",
+      "cat": "Company",
+      "logo": "cms-meditechku.png",
+      "desc": "Content admin for the company's public site — sign-in required.",
+      "tags": "cms laravel content",
+      "health": "/up"
     }
   ]
 }
