@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T20:58:19Z",
+  "generated_at": "2026-10-31T23:54:48Z",
   "checked": 21,
   "up": 20,
   "services": [
@@ -12,10 +12,10 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 763,
+      "latency_ms": 794,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 13
+      "samples": 14
     },
     {
       "slug": "wish",
@@ -26,10 +26,10 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 491,
+      "latency_ms": 541,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 13
+      "samples": 14
     },
     {
       "slug": "idxstock",
@@ -40,10 +40,10 @@
       "verified": true,
       "app_status": "Server is online",
       "code": 200,
-      "latency_ms": 1289,
+      "latency_ms": 1416,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 13
+      "samples": 14
     },
     {
       "slug": "claim",
@@ -54,10 +54,10 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 1269,
+      "latency_ms": 1254,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 13
+      "samples": 14
     },
     {
       "slug": "terminology",
@@ -68,10 +68,10 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 1138,
+      "latency_ms": 1036,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 13
+      "samples": 14
     },
     {
       "slug": "fusion",
@@ -82,10 +82,10 @@
       "verified": true,
       "app_status": "ok",
       "code": 200,
-      "latency_ms": 1676,
+      "latency_ms": 1255,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 13
+      "samples": 14
     },
     {
       "slug": "transformer",
@@ -96,10 +96,10 @@
       "verified": true,
       "app_status": "ok",
       "code": 200,
-      "latency_ms": 1121,
-      "uptime_24h": 76.92,
-      "uptime_7d": 76.92,
-      "samples": 13
+      "latency_ms": 970,
+      "uptime_24h": 78.57,
+      "uptime_7d": 78.57,
+      "samples": 14
     },
     {
       "slug": "auth",
@@ -110,10 +110,10 @@
       "verified": true,
       "app_status": "ok",
       "code": 200,
-      "latency_ms": 1698,
+      "latency_ms": 1667,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 13
+      "samples": 14
     },
     {
       "slug": "cms",
@@ -124,10 +124,10 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 1051,
+      "latency_ms": 964,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 13
+      "samples": 14
     },
     {
       "slug": "ivanmd",
@@ -138,10 +138,10 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 217,
+      "latency_ms": 265,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 13
+      "samples": 14
     },
     {
       "slug": "clinic",
@@ -152,10 +152,10 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 855,
+      "latency_ms": 899,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 13
+      "samples": 14
     },
     {
       "slug": "clinix",
@@ -166,10 +166,10 @@
       "verified": true,
       "app_status": "ok",
       "code": 200,
-      "latency_ms": 866,
+      "latency_ms": 895,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 13
+      "samples": 14
     },
     {
       "slug": "spectra",
@@ -180,10 +180,10 @@
       "verified": true,
       "app_status": "ok",
       "code": 200,
-      "latency_ms": 1708,
+      "latency_ms": 1833,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 13
+      "samples": 14
     },
     {
       "slug": "pay",
@@ -194,10 +194,10 @@
       "verified": true,
       "app_status": "ok",
       "code": 200,
-      "latency_ms": 1370,
+      "latency_ms": 1093,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 13
+      "samples": 14
     },
     {
       "slug": "link",
@@ -208,10 +208,10 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 1116,
+      "latency_ms": 898,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 13
+      "samples": 14
     },
     {
       "slug": "idi",
@@ -222,10 +222,10 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 767,
+      "latency_ms": 461,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 13
+      "samples": 14
     },
     {
       "slug": "risingstar",
@@ -236,10 +236,10 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 1171,
+      "latency_ms": 1622,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 13
+      "samples": 14
     },
     {
       "slug": "portfolio",
@@ -250,10 +250,10 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 827,
+      "latency_ms": 855,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 13
+      "samples": 14
     },
     {
       "slug": "meditechku",
@@ -264,10 +264,10 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 1954,
+      "latency_ms": 2177,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 4
+      "samples": 5
     },
     {
       "slug": "cms-meditechku",
@@ -278,10 +278,10 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 692,
+      "latency_ms": 739,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 4
+      "samples": 5
     },
     {
       "slug": "iderare",
@@ -292,10 +292,10 @@
       "verified": false,
       "app_status": null,
       "code": 503,
-      "latency_ms": 1165,
-      "uptime_24h": 50.0,
-      "uptime_7d": 50.0,
-      "samples": 4
+      "latency_ms": 542,
+      "uptime_24h": 40.0,
+      "uptime_7d": 40.0,
+      "samples": 5
     }
   ]
 }
