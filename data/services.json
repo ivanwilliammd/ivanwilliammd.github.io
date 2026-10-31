@@ -146,7 +146,7 @@
       "name": "IVAI Link",
       "url": "https://link.ivai.app",
       "cat": "Commerce",
-      "logo": "link.svg",
+      "logo": "link.png",
       "desc": "Invitation-only short links with QR and click analytics.",
       "tags": "url shortener qr analytics",
       "health": null
