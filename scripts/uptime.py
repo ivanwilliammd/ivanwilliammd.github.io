@@ -95,11 +95,18 @@ def main() -> int:
             if isinstance(payload, dict) and "status" in payload:
                 verified = True
                 app_status = str(payload.get("status"))
+            elif isinstance(payload, dict) and "status_code" in payload:
+                # Gaya FastAPI (iderare /health): {"status_code":200,"detail":"..."}.
+                # Kode di dalam badan lebih tepercaya daripada kode HTTP halaman.
+                verified = True
+                app_status = str(payload.get("status_code"))
         except Exception:
             pass
 
         BAD_WORDS = ("down", "degraded", "error", "fail", "unhealthy", "offline")
         bad_reported = bool(app_status) and any(w in app_status.lower() for w in BAD_WORDS)
+        if app_status is not None and app_status.isdigit():
+            bad_reported = int(app_status) >= 500
         ok = code != 0 and code < 500 and not bad_reported
         series = history.get(svc["slug"], [])
         series.append([now, 1 if ok else 0, ms])

@@ -200,6 +200,16 @@
       "desc": "Content admin for the company's public site — sign-in required.",
       "tags": "cms laravel content",
       "health": "/up"
+    },
+    {
+      "slug": "iderare",
+      "name": "IDeRare Pheno",
+      "url": "https://iderare.ivanwilliamharsono.com",
+      "cat": "Interoperability",
+      "logo": null,
+      "desc": "FHIR resource parser for rare-disease phenotyping (FastAPI).",
+      "tags": "fhir rare disease api",
+      "health": "/health"
     }
   ]
 }
