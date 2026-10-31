@@ -26,7 +26,7 @@
       "name": "IVAI Stock",
       "url": "https://idxstock.ivai.app",
       "cat": "Health AI",
-      "logo": "idxstock.png",
+      "logo": "idxstock-ivai.png",
       "desc": "Market intelligence agent: watchlists, fundamentals, price action.",
       "tags": "finance agent signals",
       "health": "/api/health"
