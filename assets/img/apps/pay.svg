@@ -1,10 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="Pay meditechku">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="pay.meditechku">
+  <!--
+    Lambang pay.meditechku: kartu pembayaran dengan denyut nadi di dalamnya.
+
+    Dua hal yang dijual layanan ini ada di satu tanda - kartu (pembayaran) dan garis nadi (kesehatan,
+    ekosistem Meditechku). Gradien cyan ke violet sama dengan tombol dan kartu masuk yang sudah
+    dipakai, jadi lambang ini tidak terasa sebagai tempelan baru.
+
+    Ukuran kecil: garis memakai 4 satuan dari 64 (1:16). Pada 16px itu menjadi 1px - masih terlihat,
+    karena bentuknya garis tunggal tanpa detail bercabang. Latar gradien penuh supaya kartu putih di
+    dalamnya tetap punya kontras saat dipasang di tab, favicon, atau kartu 42px.
+  -->
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#06b6d4"/><stop offset="1" stop-color="#8b5cf6"/>
+    <linearGradient id="payGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
     </linearGradient>
   </defs>
-  <rect width="24" height="24" rx="5.5" fill="url(#g)"/>
-  <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-        fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect width="64" height="64" rx="15" fill="url(#payGrad)"/>
+
+  <!-- Kartu -->
+  <rect x="11" y="21" width="42" height="26" rx="6" fill="none" stroke="#ffffff" stroke-width="4"/>
+
+  <!-- Garis nadi yang berjalan melintasi kartu -->
+  <path d="M15 34h7l3.5-6 4.5 12 3.5-6h15.5"
+        fill="none" stroke="#ffffff" stroke-width="4"
+        stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
