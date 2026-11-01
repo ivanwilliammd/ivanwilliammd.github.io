@@ -89,7 +89,7 @@ function card(app) {
 function render() {
   grid.replaceChildren(...APPS.filter(matches).map(card));
   const shown = grid.children.length;
-  countEl.textContent = `${shown} of ${APPS.length} services`;
+  countEl.textContent = `${shown} of ${APPS.length} projects`;
   emptyEl.hidden = shown !== 0;
 }
 

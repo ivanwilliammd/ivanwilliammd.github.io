@@ -217,7 +217,7 @@
       "url": "https://ig.fhir-indonesia.org",
       "cat": "Interoperability",
       "logo": null,
-      "desc": "Implementation Guide FHIR Indonesia (ID Core): profil SATUSEHAT yang diterbitkan dari FSH lewat CI.",
+      "desc": "FHIR Indonesia Implementation Guide (ID Core) — SATUSEHAT profiles published from FSH through CI. Community standard, open contribution.",
       "tags": "fhir satusehat ig standards",
       "health": "/"
     }
