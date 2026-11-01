@@ -4,12 +4,8 @@ name: Uptime
 # Halaman pit stop membaca status.json itu; tidak ada server tambahan.
 
 on:
-  # Jaring pengaman saja. Jadwal rapat di Actions bersifat best-effort: */15 pada repo
-  # ini nyatanya berjalan tiap 2,8–7 jam. Pinger sebenarnya ada di cron VPS
-  # (scripts/uptime-cron.sh, tiap 15 menit). Jangan dikembalikan ke */15 — hasilnya
-  # hanya riwayat bolong yang tampak rapi.
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 permissions:
