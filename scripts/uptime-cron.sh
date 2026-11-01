@@ -15,6 +15,10 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 
+# Satu baris per jalan, supaya "cron benar-benar berjalan" bisa dibuktikan dari log,
+# bukan ditebak dari timestamp berkas.
+echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] mulai"
+
 git pull --rebase --autostash --quiet origin master 2>/dev/null || git rebase --abort 2>/dev/null || true
 
 python3 scripts/uptime.py >/dev/null
@@ -44,3 +48,4 @@ git add status.json data/history.json
 git -c user.name="uptime-bot" -c user.email="uptime-bot@users.noreply.github.com" \
 	commit --quiet -m "uptime: refresh status (vps)"
 git push --quiet origin master
+echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] commit $(git log --oneline -1 | cut -d" " -f1)"
