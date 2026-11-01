@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29",
+  "updated": "2026-11-01",
   "services": [
     {
       "slug": "ivai",
@@ -210,6 +210,16 @@
       "desc": "FHIR resource parser for rare-disease phenotyping (FastAPI).",
       "tags": "fhir rare disease api",
       "health": "/health"
+    },
+    {
+      "slug": "fhir-ig",
+      "name": "FHIR Indonesia IG",
+      "url": "https://ig.fhir-indonesia.org",
+      "cat": "Interoperability",
+      "logo": null,
+      "desc": "Implementation Guide FHIR Indonesia (ID Core): profil SATUSEHAT yang diterbitkan dari FSH lewat CI.",
+      "tags": "fhir satusehat ig standards",
+      "health": "/"
     }
   ]
 }
