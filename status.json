@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-01T14:15:21Z",
+  "generated_at": "2026-11-01T14:30:21Z",
   "checked": 22,
-  "up": 21,
+  "up": 22,
   "services": [
     {
       "slug": "ivai",
@@ -12,11 +12,11 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 320,
+      "latency_ms": 678,
       "cold_start": false,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 38
+      "samples": 39
     },
     {
       "slug": "wish",
@@ -27,11 +27,11 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 314,
+      "latency_ms": 486,
       "cold_start": false,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 38
+      "samples": 39
     },
     {
       "slug": "idxstock",
@@ -42,11 +42,11 @@
       "verified": true,
       "app_status": "Server is online",
       "code": 200,
-      "latency_ms": 2125,
+      "latency_ms": 1296,
       "cold_start": false,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 38
+      "samples": 39
     },
     {
       "slug": "claim",
@@ -57,11 +57,11 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 872,
+      "latency_ms": 1048,
       "cold_start": false,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 38
+      "samples": 39
     },
     {
       "slug": "terminology",
@@ -72,11 +72,11 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 657,
+      "latency_ms": 1320,
       "cold_start": false,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 38
+      "samples": 39
     },
     {
       "slug": "fusion",
@@ -87,11 +87,11 @@
       "verified": true,
       "app_status": "ok",
       "code": 200,
-      "latency_ms": 1954,
+      "latency_ms": 1564,
       "cold_start": false,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 38
+      "samples": 39
     },
     {
       "slug": "transformer",
@@ -102,11 +102,11 @@
       "verified": true,
       "app_status": "ok",
       "code": 200,
-      "latency_ms": 1394,
+      "latency_ms": 1457,
       "cold_start": false,
-      "uptime_24h": 92.11,
-      "uptime_7d": 92.11,
-      "samples": 38
+      "uptime_24h": 92.31,
+      "uptime_7d": 92.31,
+      "samples": 39
     },
     {
       "slug": "auth",
@@ -117,11 +117,11 @@
       "verified": true,
       "app_status": "ok",
       "code": 200,
-      "latency_ms": 1894,
+      "latency_ms": 616,
       "cold_start": false,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 38
+      "samples": 39
     },
     {
       "slug": "cms",
@@ -132,11 +132,11 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 961,
+      "latency_ms": 1403,
       "cold_start": false,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 38
+      "samples": 39
     },
     {
       "slug": "ivanmd",
@@ -147,11 +147,11 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 223,
+      "latency_ms": 207,
       "cold_start": false,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 38
+      "samples": 39
     },
     {
       "slug": "clinic",
@@ -162,11 +162,11 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 116,
+      "latency_ms": 70,
       "cold_start": false,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 38
+      "samples": 39
     },
     {
       "slug": "clinix",
@@ -177,11 +177,11 @@
       "verified": true,
       "app_status": "ok",
       "code": 200,
-      "latency_ms": 817,
+      "latency_ms": 1128,
       "cold_start": false,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 38
+      "samples": 39
     },
     {
       "slug": "spectra",
@@ -192,11 +192,11 @@
       "verified": true,
       "app_status": "ok",
       "code": 200,
-      "latency_ms": 1447,
+      "latency_ms": 1044,
       "cold_start": false,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 38
+      "samples": 39
     },
     {
       "slug": "pay",
@@ -207,11 +207,11 @@
       "verified": true,
       "app_status": "ok",
       "code": 200,
-      "latency_ms": 841,
+      "latency_ms": 1036,
       "cold_start": false,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 38
+      "samples": 39
     },
     {
       "slug": "link",
@@ -222,11 +222,11 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 311,
+      "latency_ms": 585,
       "cold_start": false,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 38
+      "samples": 39
     },
     {
       "slug": "idi",
@@ -237,11 +237,11 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 356,
+      "latency_ms": 414,
       "cold_start": false,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 38
+      "samples": 39
     },
     {
       "slug": "risingstar",
@@ -252,11 +252,11 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 681,
+      "latency_ms": 813,
       "cold_start": false,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 38
+      "samples": 39
     },
     {
       "slug": "portfolio",
@@ -267,11 +267,11 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 423,
+      "latency_ms": 546,
       "cold_start": false,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 38
+      "samples": 39
     },
     {
       "slug": "meditechku",
@@ -282,11 +282,11 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 2360,
+      "latency_ms": 1519,
       "cold_start": false,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 29
+      "samples": 30
     },
     {
       "slug": "cms-meditechku",
@@ -297,26 +297,26 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 297,
+      "latency_ms": 322,
       "cold_start": false,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 29
+      "samples": 30
     },
     {
       "slug": "iderare",
       "name": "IDeRare Pheno",
       "url": "https://iderare.ivanwilliamharsono.com",
       "checked": "https://iderare.ivanwilliamharsono.com/health",
-      "ok": false,
-      "verified": false,
-      "app_status": null,
-      "code": 503,
-      "latency_ms": 48939,
+      "ok": true,
+      "verified": true,
+      "app_status": "200",
+      "code": 200,
+      "latency_ms": 427,
       "cold_start": false,
-      "uptime_24h": 65.52,
-      "uptime_7d": 65.52,
-      "samples": 29
+      "uptime_24h": 66.67,
+      "uptime_7d": 66.67,
+      "samples": 30
     },
     {
       "slug": "fhir-ig",
@@ -327,11 +327,11 @@
       "verified": false,
       "app_status": null,
       "code": 200,
-      "latency_ms": 468,
+      "latency_ms": 351,
       "cold_start": false,
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "samples": 23
+      "samples": 24
     }
   ]
 }
