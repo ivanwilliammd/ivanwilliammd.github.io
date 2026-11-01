@@ -9,8 +9,10 @@ name: Keepalive
 # 503, paket Render berbayar (tanpa spin-down) yang benar.
 
 on:
+  # Sama seperti uptime.yml: penjadwal Actions tidak bisa dipegang untuk cadangan 10
+  # menit. Keepalive sebenarnya dijalankan cron VPS; workflow ini cadangan harian.
   schedule:
-    - cron: "*/10 * * * *"
+    - cron: "0 22 * * *"
   workflow_dispatch:
 
 permissions:
