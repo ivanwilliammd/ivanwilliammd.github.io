@@ -27,13 +27,19 @@ STATUS = os.path.join(ROOT, "status.json")
 HISTORY = os.path.join(ROOT, "data", "history.json")
 
 TIMEOUT = 10
+# Status yang berarti "instans sedang tidur/bangkit", bukan "aplikasi rusak".
+# Render free menidurkan instans setelah ~15 menit tanpa trafik dan menjawab 503
+# seketika dari tepi; satu percobaan saja akan mencatat layanan sehat sebagai mati.
+COLD_CODES = (0, 502, 503, 504)
+COLD_TRIES = 4
+COLD_WAIT = 8               # 8 + 16 + 24 detik ≈ 48 detik, cukup untuk bangun
 KEEP = 672          # 672 sampel x 15 menit = 7 hari
 DAY_SAMPLES = 96    # 24 jam
 UA = "Mozilla/5.0 (compatible; ivanwilliammd-uptime/1.0)"
 
 
-def probe(url: str) -> tuple[int, int, str]:
-    """(kode HTTP, latensi ms, potongan body). 0 berarti tidak menjawab."""
+def _sekali(url: str) -> tuple[int, int, str]:
+    """Satu percobaan. (kode HTTP, latensi ms, potongan body). 0 = tidak menjawab."""
     started = time.time()
     req = urllib.request.Request(url, method="GET")
     req.add_header("User-Agent", UA)
@@ -52,6 +58,20 @@ def probe(url: str) -> tuple[int, int, str]:
         code = 0
         body = ""
     return code, int((time.time() - started) * 1000), body
+
+
+def probe(url: str) -> tuple[int, int, str, bool]:
+    """Ulangi bila jawabannya tanda instans tidur. Bool = sempat tidur lalu bangun."""
+    mulai = time.time()
+    code, ms, body = 0, 0, ""
+    for percobaan in range(COLD_TRIES):
+        code, ms, body = _sekali(url)
+        if code not in COLD_CODES:
+            bangun = percobaan > 0
+            return code, int((time.time() - mulai) * 1000), body, bangun
+        if percobaan + 1 < COLD_TRIES:
+            time.sleep(COLD_WAIT * (percobaan + 1))
+    return code, int((time.time() - mulai) * 1000), body, False
 
 
 def uptime(series: list, window: int | None) -> float | None:
@@ -80,10 +100,10 @@ def main() -> int:
         results = list(pool.map(lambda s: (probe(target(s)), target(s)), services))
 
     out = []
-    for svc, ((code, ms, body), checked) in zip(services, results):
+    for svc, ((code, ms, body, bangun), checked) in zip(services, results):
         if code in (404, 405) and svc.get("health"):
             # Endpoint belum ter-deploy di server itu: ukur halaman depan, dan catat.
-            code, ms, body = probe(svc["url"])
+            code, ms, body, bangun = probe(svc["url"])
             checked = svc["url"]
 
         # Health yang benar menjawab JSON berisi "status". HTML 200 (halaman fallback)
@@ -121,6 +141,7 @@ def main() -> int:
             "app_status": app_status,
             "code": code,
             "latency_ms": ms,
+            "cold_start": bangun,
             "uptime_24h": uptime(history[svc["slug"]], DAY_SAMPLES),
             "uptime_7d": uptime(history[svc["slug"]], None),
             "samples": len(history[svc["slug"]]),

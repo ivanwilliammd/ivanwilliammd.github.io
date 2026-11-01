@@ -1,0 +1,37 @@
+name: Keepalive
+
+# Render free menidurkan instans setelah ~15 menit tanpa trafik; permintaan pertama
+# setelah itu dijawab 503 dari tepi selama instans bangun. Ping tiap 10 menit menjaga
+# IDeRare Pheno tetap hangat supaya pengunjung tidak menerima 503.
+#
+# Catatan jujur: penjadwal GitHub tidak dijamin tepat waktu (bisa telat beberapa menit
+# saat antrean ramai). Ini mengurangi 503, bukan menghilangkannya — kalau butuh nol
+# 503, paket Render berbayar (tanpa spin-down) yang benar.
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: keepalive
+  cancel-in-progress: true
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Bangunkan IDeRare Pheno
+        run: |
+          for percobaan in 1 2 3 4 5; do
+            kode=$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 \
+              https://iderare.ivanwilliamharsono.com/health || echo 000)
+            echo "percobaan $percobaan: HTTP $kode"
+            [ "$kode" = "200" ] && exit 0
+            sleep 10
+          done
+          echo "tidak bangun setelah 5 percobaan"
+          exit 1
