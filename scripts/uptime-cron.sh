@@ -19,7 +19,19 @@ cd "$ROOT"
 # bukan ditebak dari timestamp berkas.
 echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] mulai"
 
-git pull --rebase --autostash --quiet origin master 2>/dev/null || git rebase --abort 2>/dev/null || true
+# Two writers touch the same generated JSON (this cron and .github/workflows/uptime.yml), so
+# `pull --rebase --autostash` conflicts whenever both have a commit, and its autostash restore
+# leaves a half-merged index that fails json.load() on every later run. Move the branch and let
+# the probe rewrite the files instead; a failure is logged because set -e made it silent before.
+trap 'echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] FAILED at line $LINENO" >> "$ROOT/.git/uptime-cron.err"' ERR
+
+git fetch --quiet origin master 2>/dev/null || true
+if git merge-base --is-ancestor HEAD origin/master 2>/dev/null; then
+	git reset --hard --quiet origin/master
+else
+	# Local commits are enqueued right below, never left behind: keep HEAD, only clear the index.
+	git reset --hard --quiet
+fi
 
 python3 scripts/uptime.py >/dev/null
 
